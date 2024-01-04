@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form>
+      <!-- Name -->
+      <div>
+        <label for="username">Name</label>
+        <input type="text" placeholder="Enter Name" id="username" />
+      </div>
+      <!-- Email -->
+      <div>
+        <label for="useremail">Email</label>
+        <input type="email" placeholder="Enter Email" id="useremail" required />
+      </div>
+      <!-- Password -->
+      <div>
+        <label for="userpassword">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="userpassword"
+          required
+        />
+      </div>
+      <!-- Age -->
+      <div>
+        <label for="userage">Age</label>
+        <input
+          type="number"
+          placeholder="Enter Age"
+          id="userage"
+          style="width: 100px"
+          min="18"
+          max="60"
+        />
+      </div>
+      <!-- Gender -->
+      <div>
+        <label>Gender</label>
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="others">Others</label>
+          <input type="radio" id="others" name="gender" value="other" />
+        </div>
+      </div>
+      <!-- DOB -->
+      <div>
+        <label for="userDOB">Date of Birth</label>
+        <input
+          type="date"
+          placeholder="Enter DOB"
+          id="userDOB"
+          style="width: 100px"
+          min="2023-11-10"
+          max="2023-12-10"
+        />
+      </div>
+      <!-- Degree -->
+      <div>
+        <label>Select your degree</label>
+        <select name="degree">
+          <option value="BTECH">BTech</option>
+          <option value="BSC">BSC</option>
+          <option value="BA">BA</option>
+          <option value="MBA">MBA</option>
+          <option value="MSC">MSC</option>
+          <option value="MTECH">MTECH</option>
+        </select>
+      </div>
+      <!-- Address -->
+      <div>
+        <label for="userAddress">Address</label>
+        <textarea
+          placeholder="Enter User Address"
+          id="userAddress"
+          rows="5"
+          cols="33"
+        ></textarea>
+      </div>
+      <!-- Phone Number -->
+      <div>
+        <label for="userPhoneNumber">Phone Number</label>
+        <input type="number" id="userPhoneNumber" />
+      </div>
+      <!-- Photo -->
+      <div>
+        <label for="userProfilePic">Please Upload Profile Picture</label>
+        <input type="file" id="userProfilePic" />
+      </div>
+
+      <!-- Submit button -->
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+    <form action="/signin" method="post">
+      <div>
+        <label for="username">UserName</label>
+        <input placeholder="username" id="username" name="username" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          placeholder="password"
+          type="password"
+          id="password"
+          name="password"
+        />
+      </div>
+      <div>
+        <input type="checkbox" id="rememberMe" name="rememberMe" />
+        <label>RememberMe</label>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
