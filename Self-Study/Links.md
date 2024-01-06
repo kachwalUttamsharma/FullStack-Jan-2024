@@ -14,3 +14,9 @@
 
 1. [HTML Reference Material](https://web.dev/learn/html/welcome)
 2. [How Does Internet works?](https://www.scaler.com/topics/computer-network/how-internet-works/)
+
+### Class 3
+
+1. [CSS selectors](https://web.dev/learn/css/selectors?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fselectors)
+2. [Background Properties](https://web.dev/learn/css/backgrounds)
+3. [color properties](https://web.dev/learn/css/color)
