@@ -21,3 +21,10 @@ Scaler Full Stack Module Beginner Curriculum
     2. Selectors
     3. Colors
     4. Background
+
+## Class - 4
+
+    1. Box Model
+    2. Display
+    3. Position
+    4. Font and Test
