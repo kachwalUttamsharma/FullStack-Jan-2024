@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute vs relative</title>
+    <style>
+       div {
+        border: 5px solid black;
+        padding: 10px;
+        width: 400px;
+        height: 1400px;
+      }
+
+      #para1 {
+        position: absolute;
+        bottom: 0;
+        color: red
+      }
+     
+      #para2 {
+        color: dodgerblue;
+      }
+
+      #para3 {
+        position: relative;
+        top: 30px;
+        left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <p><footer id="para1">
+            Lorem, ipsum dolor.
+          </footer></p>
+          <p id="para2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quo eos
+            nisi quidem laboriosam corrupti doloribus aperiam aspernatur officia
+            quos.
+          </p>
+          <p id="para3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quo eos
+            nisi quidem laboriosam corrupti doloribus aperiam aspernatur officia
+            quos.
+          </p>
+    </div>
+  </body>
+</html>
