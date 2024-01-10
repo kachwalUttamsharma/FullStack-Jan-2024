@@ -22,3 +22,9 @@
 3. [color properties](https://web.dev/learn/css/color)
 4. [gogole fonts](https://fonts.google.com/)
 5. [Free Images](https://unsplash.com/)
+
+### Class 4
+
+1. [Position Properties](https://www.freecodecamp.org/news/css-position-property-explained/)
+2. [Text or typography properties](https://web.dev/learn/css/typography)
+3. [box model](https://web.dev/learn/css/box-model)
