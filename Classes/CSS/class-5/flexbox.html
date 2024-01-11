@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        display: flex;
+        /* it defines flex-items direction
+        which is directly proportional 
+        to main-axis */
+        flex-direction: row;
+        height: 500px;
+        width: 100%;
+        border: 2px solid black;
+        background-color: slategray;
+        margin: 5px;
+        /*this property is applied to main-axis
+        to move elements */
+        justify-content: center;
+        /*this property is applied to cross-axis
+        to move elements */
+        align-items: center;
+        /* it helps to wrap elements as
+        per width available 
+        (reference screen width)*/
+        flex-wrap: wrap;
+
+        /* flex-flow: flex-direction flex-wrap
+        flex-flow: row wrap; */
+
+        /* it works same as align -item but if container
+        hieght is very large in that case it helps to put 
+        elements at respective position using this 
+        property*/
+        align-content: center;
+      }
+
+      .flex-item {
+        height: 50px;
+        width: 1000px;
+        border: 2px solid black;
+        margin: 5px;
+        text-align: center;
+      }
+
+      /* order is helpful in order re-arrange the order in 
+      which elements are rendered*/
+      /* flex grow is used when we want items to grow with ratio
+      when width of screen increases*/
+      /* flex shrink is used when we want items to shrink
+      when width of screen decreases*/
+      /* flex basis is used when have to fix width or height wrt to 
+      flex-direction particular size of items*/
+      .item1 {
+        background-color: tomato;
+        /* order: 1; */
+        /* flex-grow: 1; */
+        /* flex-shrink: 3; */
+        flex-basis: 100px;
+      }
+
+      .item2 {
+        background-color: dodgerblue;
+        /* flex-grow: 2; */
+        /* flex-shrink: 1; */
+      }
+
+      .item3 {
+        background-color: brown;
+        /* order: 2; */
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+      }
+
+      .item4 {
+        background-color: teal;
+        /* flex-grow: 1; */
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+      <div class="flex-item item4">4</div>
+    </div>
+  </body>
+</html>
