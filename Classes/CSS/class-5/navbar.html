@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: deepskyblue;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+
+      .navigation a {
+        text-decoration: none;
+        display: block;
+        padding: 4px;
+        color: white;
+      }
+
+      .navigation a:hover {
+        background-color: #1565c0;
+      }
+
+      @media all and (max-width: 800px) {
+        .navigation {
+          justify-content: space-around;
+        }
+      }
+
+      @media all and (max-width: 600px) {
+        .navigation {
+          flex-direction: column;
+        }
+        .navigation a {
+          text-align: center;
+          padding: 10px;
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+  </body>
+</html>

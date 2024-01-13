@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards Demo Using Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 3px 10px;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+        margin: 10px 5px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 200px;
+        border-radius: 10px;
+      }
+
+      .card img {
+        max-width: 100%;
+        max-height: 80%;
+      }
+
+      .card .text {
+        padding: 0 10px 10px 10px;
+      }
+      .text button {
+        background-color: gray;
+        border: 0;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .text button:hover {
+        background-color: darkseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cards">
+      <article class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1666792562882-8bd04befec7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Seamlessly visualize quality</h3>
+          <p>
+            Collaboratively administrate empowered markets via plug-and-play
+            networks.
+          </p>
+          <button>Here's why</button>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1666863910470-c5906f963cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fHx8MTY4NjkzNjgyOHwx&ixlib=rb-4.0.3&q=80&w=1080"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Completely Synergize</h3>
+          <p>
+            Dramatically engage seamlessly visualize quality intellectual
+            capital without superior collaboration and idea-sharing.
+          </p>
+          <button>Here's how</button>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1666896753506-acf92db72d87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fG5hdHVyZXxlbnwwfHx8fDE2ODY5MzY4Mjh8MQ&ixlib=rb-4.0.3&q=80&w=1080"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Dynamically Procrastinate</h3>
+          <p>
+            Completely synergize resource taxing relationships via premier niche
+            markets.
+          </p>
+          <button>Read more</button>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Best in class</h3>
+          <p>
+            Imagine jumping into that boat, and just letting it sail wherever
+            the wind takes you...
+          </p>
+          <button>Just do it...</button>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1499748926165-1085fc69e9fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Dynamically innovate supply chains</h3>
+          <p>
+            Holisticly predominate extensible testing procedures for reliable
+            supply chains.
+          </p>
+          <button>Here's why</button>
+        </div>
+      </article>
+      <article class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1666896899793-65565d2a1f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjN8fG5hdHVyZXxlbnwwfHx8fDE2ODY5MzY4Mjh8MQ&ixlib=rb-4.0.3&q=80&w=1080"
+          alt="Sample photo"
+        />
+        <div class="text">
+          <h3>Sanity check</h3>
+          <p>
+            Objectively innovate empowered manufactured products whereas
+            parallel platforms.
+          </p>
+          <button>Stop here</button>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

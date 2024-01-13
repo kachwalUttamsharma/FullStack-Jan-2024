@@ -28,3 +28,9 @@
 1. [Position Properties](https://www.freecodecamp.org/news/css-position-property-explained/)
 2. [Text or typography properties](https://web.dev/learn/css/typography)
 3. [box model](https://web.dev/learn/css/box-model)
+
+### Class 5
+
+1. [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+2. [css validity check site](https://caniuse.com/?search=flexbox)
+3. [flexbox practice](https://flexboxfroggy.com/)
