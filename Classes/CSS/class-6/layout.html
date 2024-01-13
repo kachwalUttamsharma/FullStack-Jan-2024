@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 20% 1fr 70px;
+        grid-template-rows: 80px 1fr 15%;
+        gap: 10px;
+        grid-template-areas:
+          "header-section header-section header-section"
+          "menu-section content-section ads-section"
+          "menu-section footer-section footer-section";
+      }
+
+      header,
+      article,
+      aside,
+      nav,
+      footer {
+        padding: 8px;
+        background-color: tomato;
+      }
+
+      #pageHeader {
+        grid-area: header-section;
+      }
+
+      #mainArticle {
+        grid-area: content-section;
+      }
+
+      #mainNav {
+        grid-area: menu-section;
+      }
+
+      #siteAds {
+        grid-area: ads-section;
+      }
+
+      #pageFooter {
+        grid-area: footer-section;
+      }
+
+      @media all and (max-width: 600px) {
+        body {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header-section"
+            "content-section"
+            "ads-section"
+            "menu-section"
+            "footer-section";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="pageHeader">Page Header</header>
+    <article id="mainArticle">Content area</article>
+    <nav id="mainNav">Nav Bar</nav>
+    <aside id="siteAds">Ads</aside>
+    <footer id="pageFooter">Footer</footer>
+  </body>
+</html>

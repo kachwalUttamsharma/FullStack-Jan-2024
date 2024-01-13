@@ -28,3 +28,15 @@ Scaler Full Stack Module Beginner Curriculum
     2. Display
     3. Position
     4. Font and Test
+
+## Class - 5
+
+    1. flexbox
+    2. media queries
+    3. cards example with flexbox
+
+## Class - 6
+
+    1. grid
+    2. layout example
+    3. cards example with grid

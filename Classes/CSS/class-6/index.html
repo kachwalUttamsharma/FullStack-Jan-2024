@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-size: 20px;
+        line-height: 1.5;
+        color: dodgerblue;
+        background-color: tomato;
+      }
+
+      .container {
+        width: 300px;
+        height: 550px;
+        border: 2px solid black;
+        margin: 100px auto;
+        padding: 10px;
+        display: grid;
+        /*450px/4 (1fr (fractional unit)+2fr+1fr) = 112.5 */
+        /*400/4 = 100 */
+        /*repeat(columns, width)
+        repeat(3, 1fr) => 1fr 1fr 1fr */
+        /*minmax() it takes range as a variable for column or row  width */
+        /*autofill and autofit -> it tries accomodate as many column as it can
+        if columns are more than width of container new columns will be moved into new row and
+        if width of container is more than no of columns auto fill will leave empty space where as autofit will adjust width according
+        to minmax range */
+        grid-template-columns: repeat(3, 1fr);
+        /* column-gap: 10px;
+        row-gap: 10px; */
+        /*column row */
+        gap: 12px 10px;
+        grid-template-rows: repeat(3, 1fr);
+        /* items: you are trying to move items
+        inside one cell of grid */
+        /* justify-items: center;
+        align-items: center; */
+        /* place-item: align-item justify-item 
+        place-items: center center;
+        /* content : you are to move item inside
+        grid container*/
+        /* justify-content: center;
+        align-content: start; */
+        /* place-content: align-content justify-content 
+        /* place-content: start center; */
+        grid-auto-flow: column;
+      }
+
+      .item {
+        background-color: dodgerblue;
+        color: whitesmoke;
+        border: 1px solid black;
+        padding: 8px;
+      }
+
+      .item-1 {
+        /* justify-self: flex-start;
+        align-self: flex-start; */
+        /* starting line / ending line*/
+        grid-row: 1 / span 2;
+        grid-column: -4 / span 2;
+      }
+
+      .item-2 {
+        /* justify-self: center;
+        align-self: center; */
+        /* grid-column: 1 / span 2;
+        grid-row: 3 / span 2; */
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item item-6">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
