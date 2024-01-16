@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- unset -> for inheritable property it works like inherit
+    for non-inheritable property it works like initial -->
+    <style>
+      html {
+        color: red;
+        display: flex;
+      }
+      /* div {
+        color: green;
+      } */
+
+      #div {
+        margin-top: 8px;
+        color: unset;
+        display: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">Hello</div>
+    <div class="div">Hello</div>
+    <div class="div">Hello</div>
+    <div class="div">Hello</div>
+  </body>
+</html>

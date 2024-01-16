@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 50%;
+        height: 200px;
+        border: 2px solid grey;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #card {
+        width: 100px;
+        height: 100px;
+        /* border: 1px solid black; */
+        border-radius: 8px;
+        /* 
+        horizontal offset - increasing shadow horizontal
+        vertical offset - increasing shadow vertical
+        blur - buring the shadow
+        spread - how far to spread the shadow
+        */
+        box-shadow: 1px 2px 8px 5px rgb(95, 154, 95);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="card">card</div>
+    </div>
+  </body>
+</html>

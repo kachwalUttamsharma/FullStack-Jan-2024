@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Different type of units</title>
+    <!-- absolute units -->
+    <!-- pr, percentage, view height(vh), view width (vw), cm, mm, inch  -->
+    <!-- Relative units -->
+    <!-- rem (relative M), em (M) -->
+    <!-- by default rem, em - 16px -->
+    <!-- rem always prefer html tag fonts -->
+    <!-- em check in heirarchy for parent -->
+    <style>
+      html {
+        font-size: 1.8px;
+      }
+      .container {
+        font-size: 18px;
+      }
+
+      #item-1 {
+        /* 1.4*18px =  */
+        font-size: 1em;
+      }
+      #item-2 {
+        /* 1.8*10 = 18pm */
+        font-size: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="item-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at
+        reiciendis illo, nostrum eveniet quas qui excepturi veniam? Eligendi,
+        quisquam?
+      </div>
+      <div id="item-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo beatae,
+        maiores autem nulla doloremque voluptas natus quisquam impedit animi
+        soluta?
+      </div>
+    </div>
+  </body>
+</html>

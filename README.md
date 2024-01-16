@@ -10,33 +10,89 @@ Scaler Full Stack Module Beginner Curriculum
 
 ## Class - 2
 
-    1. List
-    2. Table
-    3. Forms
-    4. Inline vs Block Level Elements
+    1. Inline vs Block Level Element
+    2. Different Types List
+       -> Unodered List
+       -> Ordered List
+       -> Description List
+    3. Tables
+    4. Forms
 
 ## Class - 3
 
-    1. Way of Loading CSS
-    2. Selectors
-    3. Colors
-    4. Background
+    1. Css Introduction
+    2. Different Types Selectors
+        -> Element Selector
+        -> Class Selector
+        -> Id Selector
+        -> Attribute Selector
+        -> Descendant Selector
+        -> Children Selector
+        -> Combinatrics
+    3. CSS Colors
+        -> Default Colors
+        -> Hex Codes
+        -> rbga function
+        -> hsla() function
+    4. Background Properties
+    5. Text Related Properties (font-family, font-style...)
 
 ## Class - 4
 
-    1. Box Model
-    2. Display
-    3. Position
-    4. Font and Test
+    1. Display
+        -> inline
+        -> block
+        -> inline-block
+        -> none
+    2. box model
+        -> content-area
+        -> padding
+        -> border
+        -> margin
+    3. box-sizing
+    4. overflow
+    5. position
+        -> static
+        -> absolute
+        -> relative
+        -> fixed
+        -> sticky
 
 ## Class - 5
 
-    1. flexbox
-    2. media queries
-    3. cards example with flexbox
+    1. FlexBox
+        -> container related properties
+            > justify content
+            > align items
+            > align content
+            > flex wrap
+        -> items related properties
+            > order
+            > grow
+            > shrink
+            > basis
+    2. Media query
+    3. FlexBox Example
+            > navigation bar
+            > cards
 
-## Class - 6
+## class - 6
 
-    1. grid
-    2. layout example
-    3. cards example with grid
+    1. CSS Grid
+          -> container related properties
+            > place items
+            > place content
+            > grid-template-column
+            > grid-template-row
+            > grid-auto-flow
+            > gap
+        -> items related properties
+            > place self
+            > grid-row, grid-column
+
+## class - 7
+
+    1. Specificity
+    2. Inheritance
+    3. Box Shadow
+    4. Different types of units in css

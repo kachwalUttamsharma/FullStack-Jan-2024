@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- using inherit you can get parent values for particular property -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        height: 100px;
+        color: red;
+        border: 1px solid blue;
+        background-color: wheat;
+      }
+
+      #div1Child {
+        height: inherit;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      Parent Div
+      <div id="div1Child">Child Div 1</div>
+      <div id="div2Child">Child Div 2</div>
+    </div>
+  </body>
+</html>
