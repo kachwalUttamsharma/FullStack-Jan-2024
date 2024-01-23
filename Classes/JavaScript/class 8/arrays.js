@@ -1,7 +1,7 @@
 const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// size of an array
-console.log(a.length);
+// // size of an array
+// console.log(a.length);
 
 // for (let i = 0; i < a.length; i++) {
 //   console.log(a[i]);
@@ -16,7 +16,7 @@ console.log(a.length);
 //   }
 // });
 
-// push add item into the array at the last position
+// // push add item into the array at the last position
 // a.push(11);
 // console.log(a);
 // // pop remove an item from last position
@@ -30,14 +30,24 @@ console.log(a.length);
 // a.unshift(1);
 // console.log(a);
 
-// divides an array into 2 pieces and returns as new array
-// slice(starting index , ending index)
-const b = a.slice(3);
-console.log(b);
-console.log(a);
+// // divides an array into 2 pieces and returns as new array
+// // slice(starting index , ending index)
+// const b = a.slice(3);
+// console.log(b);
+// console.log(a);
 
-// start and end index
-const c = a.slice(0, 3);
-console.log(c);
+// // start and end index
+// const c = a.slice(0, 3);
+// console.log(c);
 
 // splice  -> add, remove and replace items in an array
+// start index, delete no of items, [all the items]
+// adding items into an array
+a.splice(1, 0, 5, 5, 5);
+console.log(a);
+// delete items from an index
+a.splice(1, 3);
+console.log(a);
+// replacing item in an array
+a.splice(0, 2, 12, 13);
+console.log(a);

@@ -96,3 +96,19 @@ Scaler Full Stack Module Beginner Curriculum
     2. Inheritance
     3. Box Shadow
     4. Different types of units in css
+
+## class - 8
+
+    1. Introduction to JS
+    2. Node.js usage and installation
+    3. Ways of Linking HTML and JavaScript
+    4. Variable
+    5. Data Types
+    6. Arrays in Depth
+
+## class - 9
+
+    1. Arrays Splice
+    2. Objects in depth
+    3. Hoisting with var and let,const
+    4. Reference Data type manipulation
