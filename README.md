@@ -112,3 +112,10 @@ Scaler Full Stack Module Beginner Curriculum
     2. Objects in depth
     3. Hoisting with var and let,const
     4. Reference Data type manipulation
+
+## class - 10
+
+    1. Introduction to DOM
+    2. Element Selector (getElementById, getElementByClassName, querySelector, querySelectorAll)
+    3. appendChild, insertBefore
+    4. Event and addEventListener
