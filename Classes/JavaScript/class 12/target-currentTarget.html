@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 1px solid gray;
+      }
+
+      .grandparent {
+        background-color: lightblue;
+        width: 20rem;
+        height: 20rem;
+      }
+
+      .parent {
+        background-color: lightgreen;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      .child {
+        background-color: lightgoldenrodyellow;
+        width: 5rem;
+        height: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box grandparent">
+      GrandParent
+      <div class="box parent">
+        Parent
+        <div class="box child">Child</div>
+      </div>
+    </div>
+
+    <script>
+      const gp = document.querySelector(".grandparent");
+      gp.addEventListener("click", (event) => {
+        console.log("target", event.target);
+        console.log("current target", event.currentTarget);
+      });
+    </script>
+  </body>
+</html>

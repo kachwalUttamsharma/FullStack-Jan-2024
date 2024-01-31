@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="all">Remove All</button>
+    <ul>
+        <li>
+            <p>Task - 1</p>
+            <button>delete</button>
+        </li>
+
+        <li>
+            <p>Task - 2</p>
+            <button>delete</button>
+        </li>
+
+        <li>
+            <p>Task - 3</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 4</p>
+            <button>delete</button>
+        </li>
+    </ul>
+    <script>
+        // Q-1.
+        //  1. Make remove all button work - DONE
+        //  2. also make individual delete btn work - 
+
+        const removeAllBtn = document.querySelector("#all");
+        const allItems = document.querySelector("ul");
+
+        removeAllBtn.addEventListener("click", () => {
+            allItems.remove();
+        });
+
+        const allDelBtn = document.querySelectorAll("ul button");
+        
+        // for (let i = 0; i < allDelBtn.length; i++) {
+        //     allDelBtn[i].addEventListener("click", () => {
+        //         allDelBtn[i].parentNode.remove();
+        //     });
+        // }
+
+        allItems.addEventListener("click", (event) => {
+            const elem = event.target;
+            const tagName = elem.tagName;
+
+            if (tagName === "BUTTON") {
+                elem.parentNode.remove();
+            }
+        })
+    </script>
+</body>
+
+</html>
