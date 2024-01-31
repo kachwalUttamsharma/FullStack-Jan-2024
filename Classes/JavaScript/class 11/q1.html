@@ -14,13 +14,15 @@
 
       const btnElem = document.querySelector(".btn");
 
-      btnElem.addEventListener("click", (event) => {
+      const handler = () => {
         let newDivElem = document.createElement("p");
         newDivElem.innerText = "Hello";
 
         const bodyElem = document.querySelector("body");
         bodyElem.append(newDivElem);
-      });
+      }
+
+      btnElem.addEventListener("click", handler);
     </script>
   </body>
 </html>
