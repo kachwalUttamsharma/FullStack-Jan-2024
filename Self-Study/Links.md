@@ -40,3 +40,7 @@
 1. [naming convention for css](https://css-tricks.com/bem-101/)
 2. [autofill vs autofit](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)
 3. [grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)
+
+## class 14
+
+1. [BEM Conventions](https://css-tricks.com/bem-101/)
