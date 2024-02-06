@@ -64,13 +64,35 @@ const createTicket = (ticketInfo) => {
     <i class="fa-solid fa-lock"></i>
   </div>`;
   mainTicketContainer.appendChild(ticketCont);
-  handleRemove(ticketCont);
+  // if you want to add listener to each ticket and remove it
+  // handleRemove(ticketCont);
 };
 
-const handleRemove = (ticket) => {
-  ticket.addEventListener("click", () => {
-    if (removeTaskFlag === true) {
-      ticket.remove();
+// const handleRemove = (ticket) => {
+//   ticket.addEventListener("click", () => {
+//     if (removeTaskFlag === true) {
+//       ticket.remove();
+//     }
+//   });
+// };
+
+// using the concept of event bubbling event.target will have child ticket
+// which is clicked
+mainTicketContainer.addEventListener("click", (event) => {
+  console.log(event);
+  const childCssClasses = [
+    "task-area",
+    "ticket-id",
+    "lock",
+    "black",
+    "lightgreen",
+    "lightblue",
+  ];
+  if (removeTaskFlag === true) {
+    if (childCssClasses.includes(event.target.classList[0])) {
+      event.target.parentNode.remove();
+    } else if (event.target.classList[0] === "ticket-cont") {
+      event.target.remove();
     }
-  });
-};
+  }
+});
