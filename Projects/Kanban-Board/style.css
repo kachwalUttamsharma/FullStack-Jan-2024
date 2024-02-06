@@ -133,7 +133,6 @@
 
 .ticket-color {
   height: 1rem;
-  background-color: black;
 }
 
 .ticket-id {
@@ -145,4 +144,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.active-status-color {
+  border: 5px solid lightslategrey;
 }

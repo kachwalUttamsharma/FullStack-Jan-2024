@@ -119,3 +119,44 @@ Scaler Full Stack Module Beginner Curriculum
     2. Element Selector (getElementById, getElementByClassName, querySelector, querySelectorAll)
     3. appendChild, insertBefore
     4. Event and addEventListener
+
+## class - 11
+
+    1. Imperative vs dcalrative coding
+    2. Introduction DOM & Web API
+    3. How we can access elements from DOM
+    4. How we can add event listener to element or node
+    5. How we create new element
+    6. How we can update and append elements to DOM
+
+## Class - 12
+
+    Events
+
+    1. Click
+    2. dblclick
+    3. change
+    4. keydown
+    5. keyup
+    6. mouseout
+    7. mouseover
+    8. scroll
+
+    addeventlistner -> HOF and it takes callback function where you write actual implementation logic
+
+## Class - 13 Weather APP Javascript/projects/weatherapp
+
+    * Api link -> https://www.weatherapi.com/login.aspx
+
+    * Json -> https://www.w3schools.com/js/js_json_intro.asp
+
+    * Api -> https://aws.amazon.com/what-is/api/#:~:text=on%20your%20phone.-,What%20does%20API%20stand%20for%3F,of%20service%20between%20two%20applications.
+        https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/
+
+## Class - 14 Kanban Board
+
+    Part - 1
+    ## Requirement Discussion and Wireframe Discussion
+    1. HTML Mock for NavBar(Tool Bar), Ticket Creation Part, Ticket Viewing Part
+    2. Applied CSS for above mentioned Sections
+    3. Toogle Tocket Creation part
