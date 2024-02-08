@@ -7,9 +7,38 @@ const removeBtn = document.querySelector(".remove-btn");
 const toolBoxColors = document.querySelectorAll(".color");
 
 const ticketArr = [];
+console.log(ticketArr);
 for (let i = 0; i < toolBoxColors.length; i++) {
   toolBoxColors[i].addEventListener("click", () => {
+    // get the selected color from the filter
     const selectedToolBoxColor = toolBoxColors[i].classList[0];
+
+    // filter the tickets based on the selected color
+    const filteredTickets = ticketArr.filter((ticket) => {
+      return selectedToolBoxColor === ticket.ticketColor;
+    });
+
+    // remove all the selected those are created
+    const allTicket = document.querySelectorAll(".ticket-cont");
+    for (let i = 0; i < allTicket.length; i++) {
+      allTicket[i].remove();
+    }
+
+    // re-create the filtered tickets
+    filteredTickets.forEach((ticket) =>
+      createTicket(ticket.ticketColor, ticket.ticketInfo, ticket.ticketId)
+    );
+  });
+
+  toolBoxColors[i].addEventListener("dblclick", () => {
+    // remove all the selected those are created
+    const allTicket = document.querySelectorAll(".ticket-cont");
+    for (let i = 0; i < allTicket.length; i++) {
+      allTicket[i].remove();
+    }
+    ticketArr.forEach((ticket) =>
+      createTicket(ticket.ticketColor, ticket.ticketInfo, ticket.ticketId)
+    );
   });
 }
 let addTaskFlag = false;
@@ -52,18 +81,18 @@ allPriorityColor.forEach((colorElem) => {
 });
 modalCont.addEventListener("keydown", (event) => {
   if (event.key === "Alt") {
-    createTicket(textArea.value);
+    createTicket(modalPriorityColor, textArea.value, "");
     modalCont.style.display = "none";
     textArea.value = "";
     cleanUpColorSelction();
   }
 });
 
-const createTicket = (ticketInfo) => {
-  let ticketId = shortid();
-  let ticketCont = document.createElement("div");
+const createTicket = (ticketColor, ticketInfo, ticketUniqueId) => {
+  const ticketId = ticketUniqueId || shortid();
+  const ticketCont = document.createElement("div");
   ticketCont.setAttribute("class", "ticket-cont");
-  ticketCont.innerHTML = `<div class="${modalPriorityColor} ticket-color"></div>
+  ticketCont.innerHTML = `<div class="${ticketColor} ticket-color"></div>
   <div class="ticket-id">${ticketId}</div>
   <div class="task-area">
     ${ticketInfo}
@@ -72,17 +101,22 @@ const createTicket = (ticketInfo) => {
     <i class="fa-solid fa-lock"></i>
   </div>`;
   mainTicketContainer.appendChild(ticketCont);
-  ticketArr.push({ ticketId, ticketInfo, modalPriorityColor });
+  if (ticketUniqueId.length <= 0) {
+    ticketArr.push({ ticketId, ticketInfo, ticketColor });
+  }
   // if you want to add listener to each ticket and remove it
-  handleRemove(ticketCont);
+  handleRemove(ticketCont, ticketId);
   handleLock(ticketCont);
   handleColor(ticketCont);
 };
 
-const handleRemove = (ticket) => {
+const handleRemove = (ticket, ticketId) => {
   ticket.addEventListener("click", () => {
     if (removeTaskFlag === true) {
       ticket.remove();
+      const ticketObj = getTicket(ticketId);
+      ticketArr.splice(ticketObj, 1);
+      console.log("after deleting from arr", ticketArr);
     }
   });
 };
@@ -127,4 +161,16 @@ const handleColor = (ticket) => {
     colorBand.classList.remove(currentColor);
     colorBand.classList.add(newColor);
   });
+};
+
+// get the ticket based on ticketId
+const getTicket = (ticketId) => {
+  let ticket = {};
+  for (let i = 0; i < ticketArr.length; i++) {
+    if ((ticketArr[i].ticketId = ticketId)) {
+      ticket = ticketArr[i];
+      break;
+    }
+  }
+  return ticket;
 };
