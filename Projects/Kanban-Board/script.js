@@ -84,6 +84,7 @@ modalCont.addEventListener("keydown", (event) => {
     createTicket(modalPriorityColor, textArea.value, "");
     modalCont.style.display = "none";
     textArea.value = "";
+    modalPriorityColor = "black";
     cleanUpColorSelction();
   }
 });
