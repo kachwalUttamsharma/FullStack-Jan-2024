@@ -160,3 +160,16 @@ Scaler Full Stack Module Beginner Curriculum
     1. HTML Mock for NavBar(Tool Bar), Ticket Creation Part, Ticket Viewing Part
     2. Applied CSS for above mentioned Sections
     3. Toogle Tocket Creation part
+
+## Class - 15 Kanban Board
+
+    Part - 2
+    1. Dynamic way of creating Ticket
+    2. Handling Deleting of Ticket using Remove Button
+
+## Class - 16 Kanban Board
+
+    Part- 3
+    1. locking mechanism
+    2. filtering mechanism
+    3. handling task status    
