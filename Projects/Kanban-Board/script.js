@@ -107,8 +107,8 @@ const createTicket = (ticketColor, ticketInfo, ticketUniqueId) => {
   }
   // if you want to add listener to each ticket and remove it
   handleRemove(ticketCont, ticketId);
-  handleLock(ticketCont);
-  handleColor(ticketCont);
+  handleLock(ticketCont, ticketId);
+  handleColor(ticketCont, ticketId);
 };
 
 const handleRemove = (ticket, ticketId) => {
@@ -125,7 +125,7 @@ const handleRemove = (ticket, ticketId) => {
 let lockTicket = "fa-lock";
 let unLockTicket = "fa-lock-open";
 
-const handleLock = (ticket) => {
+const handleLock = (ticket, ticketId) => {
   const ticketLockElem = ticket.querySelector(".lock");
   const ticketLockIcon = ticketLockElem.children[0];
   const ticketTaskArea = ticket.querySelector(".task-area");
@@ -139,13 +139,17 @@ const handleLock = (ticket) => {
       ticketLockIcon.classList.remove("fa-lock-open");
       ticketLockIcon.classList.add("fa-lock");
       ticketTaskArea.setAttribute("contenteditable", "false");
+      const taskToBeUpdated = ticketArr.findIndex(
+        (t) => t.ticketId === ticketId
+      );
+      ticketArr[taskToBeUpdated].ticketInfo = ticketTaskArea.innerText;
     }
   });
 };
 
 const colors = ["lightpink", "lightgreen", "lightblue", "black"];
 
-const handleColor = (ticket) => {
+const handleColor = (ticket, ticketId) => {
   let colorBand = ticket.querySelector(".ticket-color");
   colorBand.addEventListener("click", () => {
     // we have find color of the band and then index of that color
@@ -161,6 +165,8 @@ const handleColor = (ticket) => {
     const newColor = colors[(currentColorIndex + 1) % colors.length];
     colorBand.classList.remove(currentColor);
     colorBand.classList.add(newColor);
+    const taskToBeUpdated = ticketArr.findIndex((t) => t.ticketId === ticketId);
+    ticketArr[taskToBeUpdated].ticketColor = newColor;
   });
 };
 
