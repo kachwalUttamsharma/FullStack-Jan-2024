@@ -190,5 +190,6 @@ modalCont.addEventListener("keydown", (event) => {
     textArea.value = "";
     modalPriorityColor = "black";
     cleanUpColorSelction();
+    addTaskFlag = false;
   }
 });
