@@ -12,30 +12,49 @@
   word-wrap: break-word;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  height: 25px;
+  width: 30px;
+}
 /* Too Box or NavBar CSS */
 
 .toolbox-cont {
   background-color: var(--background-color-dark);
-  height: 5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
-.toolbox-cont > * {
+/* .toolbox-cont > * {
   margin-left: 4rem;
-}
+} */
 .toolbox-priority-cont {
   display: flex;
-  height: 3.5rem;
-  width: 18rem;
+  height: 2.5rem;
+  padding: 0.8rem;
   background-color: var(--background-for-toolbox);
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 1rem;
 }
 
 .color {
   height: 1.5rem;
   width: 3rem;
+  border: 1px solid #245953;
+  border-radius: 1rem;
+  font-size: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
 }
 
 .color:hover {
@@ -59,10 +78,11 @@
 }
 
 .action-btn-cont {
-  height: 3.5rem;
+  height: 2.5rem;
   width: 8rem;
   background-color: var(--background-for-toolbox);
   display: flex;
+  border-radius: 1rem;
 }
 
 .action-btn-cont > * {
@@ -98,6 +118,10 @@
   height: 100%;
   width: 75%;
   font-size: 1.5rem;
+  padding-left: 0.4rem;
+  padding-top: 0.4rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .priority-colors-cont {
@@ -108,26 +132,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .priority-color {
-  height: 3rem;
-  width: 5rem;
+  height: 2rem;
+  width: 90%;
+  border: 1px solid #245953;
+  border-radius: 0.8rem;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
 }
 
 /* Tickets */
 
 .main-ticket-cont {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .ticket-cont {
-  height: 12rem;
-  width: 14rem;
+  height: 10rem;
+  width: 10rem;
   background-color: coral;
   position: relative;
 }
