@@ -58,6 +58,7 @@ const handleLock = (ticket, ticketId) => {
   });
 };
 
+// Colors Array
 const colors = ["lightpink", "lightgreen", "lightblue", "black"];
 
 const handleColor = (ticket, ticketId) => {
