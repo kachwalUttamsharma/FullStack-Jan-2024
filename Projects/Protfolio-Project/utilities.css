@@ -1,0 +1,49 @@
+    
+    
+.flex{
+    display: flex;
+    }
+    .items-centre{
+    align-items: center;
+    }
+    .justify-between{
+    justify-content: space-between;
+    }
+    .justify-center{
+    justify-content: center;
+    }
+    .justify-right{
+    justify-content: right;
+    }
+    .btn{
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    }
+    .btn-primary{
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-top: -15rem;
+    }
+    .btn-primary:hover{
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    }
+    .flex-1{
+    flex: 1;
+    }
+    .btn-secondary{
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+    }
+    .btn-secondary:hover{
+    background: var(--primary);
+    color: var(--secondary);
+    }

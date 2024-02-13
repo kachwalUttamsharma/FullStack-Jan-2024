@@ -172,4 +172,11 @@ Scaler Full Stack Module Beginner Curriculum
     Part- 3
     1. locking mechanism
     2. filtering mechanism
-    3. handling task status    
+    3. handling task status
+
+## Class - 17 Kanban Board
+
+    Part- 4
+    1. Local Storage Implementation
+    2. Additional Style changes
+    3. Deployment

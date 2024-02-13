@@ -1,31 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- header -->
-    <!-- Semantic tags goes names it replaces div and span -->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+
+<body>
     <header>
-      <nav>Home</nav>
-      <nav>About</nav>
-      <nav>Projects</nav>
-      <nav>Blog</nav>
+        <div class="container">
+            <nav class="flex items-centre justify-between">
+                <div class="left flex justfiy-right">
+                    <div class="logo">
+                        <img src="./assets/scaler-academy logo 2.png" width="50px" alt="logo">
+                    </div>
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Blog</a></li>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero flex items-centre justify-between">
+            <div class="left flex-1 justify-center">
+                <img src="./assets/uttam.png" alt="Profile">
+            </div>
+            <div class="right flex-1">
+                <h6>Uttam Sharma</h6>
+                <h1>I'm a Frontend<br> <span>FullStack Developer</span></h1>
+                <p>Description</p>
+                <div>
+                    <button class="btn btn-secondary">DOWNLOAD RESUME</button>
+                </div>
+            </div>
+        </div>
     </header>
-    <!-- about me  -->
-    <section>
-      <img src="" alt="Profile picture for portfolio" />
-      <h3>I am Uttam Sharma</h3>
-      <h5>I am Frontend Full Stack Developer</h5>
-      <h6>Description</h6>
-      <button>Download Resume</button>
+
+
+
+    <section class="about">
+        <div class="container flex items-centre">
+            <div class="left flex-1 justify-right">
+                <img src="./assets/uttam_with_dog.jpeg" height="400px" alt="profile pic">
+            </div>
+            <div class="right flex-1">
+                <h1>About <span>Me</span></h1>
+                <h3>Hello! I'm Uttam Sharma</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque adipisci distinctio obcaecati aliquid,
+                    quia tempora quis optio repudiandae officia earum?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+                <div class="socials">
+                    <a href="#"><img src="./assets/linkedIn.png" width="40px"></a>
+                    <a href="#"><img src="./assets/github logo.png" width="40px"></a>
+                    <a href="#"><img src="./assets/leet logo.png" width="40px"></a>
+                    <a href="#"><img src="./assets/twitter logo.png" width="40px"></a>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- my project -->
-    <section></section>
-    <!-- footer -->
-    <footer></footer>
-  </body>
+
+
+    <section class="services">
+        <div class="container">
+            <h1 class="services-head">My Projects</h1>
+            <p>I mostly work with HTML ,CSS ,JavaScript , React and Node</p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="./assets/calculator png.png">
+                    <h2>Calculator</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/cart png.png">
+                    <h2>Shopping Cart</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/to do list.png">
+                    <h2>To do List</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact-form">
+        <h2>Get in Touch </h2>
+        <form class="contact_heading" id="contact" name="contact" accept-charset="utf-8">
+          <label><span>Name</span><input class="form_input" name="name" type="text" placeholder="Name"/></label>
+          <label><span>Email</span><input class="form_input" name="email" type="email" placeholder="Email"/></label>
+          <label><span>Message</span><textarea class="form_input" name="message" placeholder="Message"></textarea></label>
+          <input class="form_input submit_button" name="submit" type="submit" value="Send"/>
+        </form>
+      </section>
+
+
+</body>
+
 </html>
