@@ -24,8 +24,8 @@ const handleRemove = (ticket, ticketId) => {
   ticket.addEventListener("click", () => {
     if (removeTaskFlag === true) {
       ticket.remove();
-      const ticketObj = getTicket(ticketId);
-      ticketArr.splice(ticketObj, 1);
+      const ticketIndex = ticketArr.findIndex((t) => t.ticketId === ticketId);
+      ticketArr.splice(ticketIndex, 1);
       localStorage.setItem("tasks", JSON.stringify(ticketArr));
       console.log("after deleting from arr", ticketArr);
     }

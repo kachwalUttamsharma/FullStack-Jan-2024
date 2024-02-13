@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            border: 0.2rem solid black;
+        }
+
+        .star-container {
+            display: flex;
+            font-size: 3rem;
+        }
+
+        .star {
+            cursor: pointer;
+            padding: 0.2rem;
+            color: gray;
+        }
+
+        .star-fill {
+            color: gold;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Start Component</h1>
+      <div class="star-container">
+        <div class="star" data-index="1">&#9733</div>
+        <div class="star" data-index="2">&#9733</div>
+        <div class="star" data-index="3">&#9733</div>
+        <div class="star" data-index="4">&#9733</div>
+        <div class="star" data-index="5">&#9733</div>
+      </div>
+      <h2>Ratings Count -> <span id="count">0</span></h2>¯
+    </div>
+  </body>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const count = document.querySelector("#count");
+    const starContainer = document.querySelector(".star-container");
+    // approach 1
+    // stars.forEach((star) => {
+    //     star.addEventListener("click", (event) => {
+    //         const index = parseInt(star.getAttribute("data-index"));
+    //         for(let i = 0; i <stars.length; i++) {
+    //             stars[i].classList.remove("star-fill");
+    //         }
+    //         for(let i = 0; i <index; i++) {
+    //             stars[i].classList.add("star-fill");
+    //         }
+    //         count.innerText = index;
+    //     })
+    // })
+
+    //approach 2
+    starContainer.addEventListener("click", (event) => {
+        const index = event.target.getAttribute("data-index");
+        for(let i = 0; i <stars.length; i++) {
+                stars[i].classList.remove("star-fill");
+            }
+            for(let i = 0; i <index; i++) {
+                stars[i].classList.add("star-fill");
+            }
+            count.innerText = index;
+    });
+  </script>
+</html>
