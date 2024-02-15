@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .otp-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .otp {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px 0px;
+      }
+
+      .otp input {
+        width: 35px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 25px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="otp-wrapper">
+      <h1>Enter OTP</h1>
+      <div class="otp">
+        <input maxlength="1" type="number" />
+        <input maxlength="1" type="number" />
+        <input maxlength="1" type="number" />
+        <input maxlength="1" type="number" />
+        <input maxlength="1" type="number" />
+        <input maxlength="1" type="number" />
+      </div>
+    </div>
+  </body>
+  <script>
+    const inputContainer = document.querySelector(".otp");
+
+    inputContainer.addEventListener("keyup", (event) => {
+      if (event.key === "Backspace" || event.key === "Delete") {
+        event.target.previousElementSibling?.focus();
+      }
+      if (event.target.value != "" && !isNaN(Number(event.target.value))) {
+        event.target.nextElementSibling?.focus();
+      }
+    });
+  </script>
+</html>
