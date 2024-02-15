@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Comments</title>
+    <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: rgb(222, 222, 222);
+        border-radius: 0.4rem;
+        margin-top: 10px;
+        padding: 10px;
+        height: auto;
+      }
+
+      .text {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .reply {
+        color: rgb(84, 84, 233);
+        cursor: pointer;
+        font-weight: bolder;
+      }
+
+      .comment-reply-container {
+        margin-left: 4rem;
+        margin-top: 0.4rem;
+      }
+      .btn {
+        background-color: rgb(101, 101, 202);
+        color: white;
+        border-radius: 0.6rem;
+        padding: 5px;
+        border: 0;
+        margin-left: 2px;
+        height: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      .input {
+        border-radius: 0.6rem;
+        height: 30px;
+      }
+      .all-comments:not(:first-child) {
+        margin-left: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="comment-container">
+        <div class="all-comments">
+          <div class="card">
+            <div class="text">First Commentator</div>
+            <div class="reply">Add Reply</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // creating input box for replying
+    function createInputBox() {
+      const elem = document.createElement("div");
+      elem.setAttribute("class", "comment-reply-container");
+      elem.innerHTML = `<input type="text" placeholder="write your reply" class="input" />
+            <button class="btn">Submit</button>`;
+      return elem;
+    }
+
+    // create comment and add reply button for card
+    function createAddReply(text) {
+      const elem = document.createElement("div");
+      elem.setAttribute("class", "all-comments");
+      elem.innerHTML = ` <div class="card">
+            <div class="text">${text}</div>
+            <div class="reply">Add Reply</div>
+          </div>`;
+      return elem;
+    }
+
+    const commentContainer = document.querySelector(".comment-container");
+    commentContainer.addEventListener("click", (e) => {
+      const closestCard = e.target.closest(".all-comments");
+      if (e.target.classList.contains("reply")) {
+        const elem = createInputBox();
+        closestCard.appendChild(elem);
+      }
+      if (e.target.classList.contains("btn")) {
+        const inputElem = document.querySelector(".input");
+        const elem = createAddReply(inputElem.value);
+        closestCard.appendChild(elem);
+        const inputContainer = e.target.closest(".comment-reply-container");
+        inputContainer.remove();
+      }
+    });
+  </script>
+</html>
