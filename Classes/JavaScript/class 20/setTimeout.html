@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeout and SetInterval</title>
+    <style>
+      .container {
+        height: 50px;
+        width: 50px;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SetTimeout and SetInterval</h1>
+    <div class="container">I am the div</div>
+    <button>Stop the animation</button>
+  </body>
+  <script>
+    const div = document.querySelector("div");
+    const btn = document.querySelector("button");
+    let width = 50;
+    // const interval = setInterval(() => {
+    //   console.log("from setInterval");
+    //   div.style.width = 2 * width + "px";
+    //   width = 2 * width;
+    //   //   if (width > 500) {
+    //   //     clearInterval(interval);
+    //   //   }
+    // }, 2000);
+
+    const timeout = setTimeout(() => {
+      console.log("from setTimeout");
+      div.style.width = "400px";
+    }, 2000);
+    btn.addEventListener("click", () => {
+      clearTimeout(timeout);
+    });
+  </script>
+</html>

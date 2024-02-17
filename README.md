@@ -192,3 +192,10 @@ Scaler Full Stack Module Beginner Curriculum
     1. OTP Component
     2. Nested Comments Component
     3. Progress Bar Component
+
+## Class - 20 Async JS Beginging
+
+    1. SetTimeout
+    2. Debounce
+    3. Throtling
+    4. Async vs Defer uscases
