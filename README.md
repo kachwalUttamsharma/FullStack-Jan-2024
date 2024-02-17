@@ -180,3 +180,15 @@ Scaler Full Stack Module Beginner Curriculum
     1. Local Storage Implementation
     2. Additional Style changes
     3. Deployment
+
+## Class - 18 Event Propagation & Counter Component & Star Component
+
+    1. Event Propagation - Bubbling and capturing
+    2.Counter Component - Machine Coding
+    2. Star Component - Machine Coding
+
+## Class - 19 Machine Coding -2
+
+    1. OTP Component
+    2. Nested Comments Component
+    3. Progress Bar Component
