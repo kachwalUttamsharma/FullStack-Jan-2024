@@ -44,3 +44,5 @@
 ## class 14
 
 1. [BEM Conventions](https://css-tricks.com/bem-101/)
+2. [Machine Codings Questions](https://sadanandpai.github.io/frontend-mini-challenges/javascript/)
+3. [Theory Interview Question](https://github.com/sudheerj/javascript-interview-questions?tab=readme-ov-file#what-are-the-possible-ways-to-create-objects-in-javascript) 4.[JavaScript Reference Docs](https://javascript.info/)
