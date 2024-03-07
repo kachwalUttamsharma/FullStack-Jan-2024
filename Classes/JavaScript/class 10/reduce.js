@@ -22,6 +22,7 @@ const sum1 = obj.arr.reduce((result, num) => {
 
 console.log("sumOfNumbers from reduce : " + sum1);
 
+// [1,2,3] => [1,3,6]
 function calculatePrefixSum(array) {
   const prefixSumArray = array.reduce((accumulator, currentValue) => {
     if (accumulator.length > 0) {
