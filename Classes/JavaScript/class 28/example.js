@@ -134,7 +134,7 @@ parent2();
 
 // 16
 function parent3() {
-  var a = 20; // 10
+  var a = 20; // a = 10
   function child() {
     console.log(a); // A. 20
     function child2() {
@@ -145,7 +145,7 @@ function parent3() {
     child2();
   }
   child();
-  console.log(a); // C.10
+  console.log(a); // C. 10
 }
 parent3();
 
@@ -153,7 +153,7 @@ parent3();
 function parent4() {
   var a = 20;
   function child() {
-    let a = 10;
+    let a = 10; // a = 30
     console.log(a); // A. 10
     function child2() {
       console.log(a); // B. 10
@@ -171,14 +171,14 @@ parent4();
 function parent5() {
   var a = 20;
   function child() {
-    let a = 10;
+    let a = 10; // a = 30
     console.log(a); // A. 10
     function child2() {
       console.log(a); // B. 10
       a = 30;
     }
     child2();
-    console.log(a); // C: 30
+    console.log(a); // C:30
   }
   child();
   console.log(a); // D: 20
