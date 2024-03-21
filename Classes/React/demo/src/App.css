@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+.mainClass {
+  display: "flex";
+  height: "200px";
+  background-color: "orange";
+  width: "100%";
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
