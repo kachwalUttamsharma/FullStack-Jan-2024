@@ -8,6 +8,8 @@ const userInfo = {
   phoneNumber: "12321345",
 };
 const Footer = () => {
+  // const [state, func] = useState();
+
   return (
     <div>
       <h2>User Profile</h2>

@@ -1,16 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 const Counter = () => {
-  let count = 0;
+  let [count, setCount] = useState(0);
 
   function Increment_Value() {
     count += 1;
-    console.log(count);
+    setCount(count);
   }
 
   function Decrement_Value() {
     count -= 1;
-    console.log(count);
+    setCount(count);
   }
   return (
     <Fragment>

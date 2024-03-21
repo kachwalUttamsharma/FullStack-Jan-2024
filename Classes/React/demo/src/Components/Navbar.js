@@ -6,3 +6,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const Navbar1 = () => {
+  return <div>Navbar1</div>;
+};

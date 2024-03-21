@@ -13,6 +13,8 @@ function App() {
       <MainContainer />
       <Footer /> */}
       <Counter />
+      <Counter />
+      <Counter />
     </div>
   );
 }
