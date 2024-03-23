@@ -1,0 +1,25 @@
+.form {
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+  justify-content: "center";
+  border: "3px solid black";
+  border-radius: "12px";
+  background-color: rgb(117, 153, 118);
+}
+
+.item {
+  padding: 10px 8px;
+}
+
+button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 10px;
+}
