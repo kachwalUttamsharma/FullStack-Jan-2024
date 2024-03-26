@@ -1,12 +1,28 @@
 import "./App.css";
-import Navabar from "./Components/Navabar";
+import Navbar from "./Components/Navbar";
+import Banner from "./Components/Banner";
+import Movies from "./Components/Movies";
+import WatchList from "./Components/WatchList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div>
-      {/* <h1 class="text-3xl text-red-800 font-bold underline">Hello world!</h1> */}
-      <Navabar />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Fragment>
+              <Navbar />
+              <Banner />
+              <Movies />
+            </Fragment>
+          }
+        ></Route>
+        <Route path="/watchList" element={<WatchList />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
