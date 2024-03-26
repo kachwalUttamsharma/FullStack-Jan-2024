@@ -10,13 +10,13 @@ const Effects = () => {
     // effect
     console.log("this will execute every time");
   });
-  // componentDidMount
+  // componentDidMount - only once
   useEffect(() => {
     // effect
     console.log("This is an example componentDidMount");
   }, []);
 
-  // componentDidUpdate
+  // componentDidUpdate - when url param changes
   useEffect(() => {
     // effect
     console.log(`${url} got changed`);
