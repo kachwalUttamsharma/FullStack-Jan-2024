@@ -38,14 +38,13 @@ const Movies = () => {
   }, []);
 
   const loadPreviousPageMovies = useCallback(() => {
-    if (page > 0) {
-      setPage((prevPage) => prevPage - 1);
-    }
+    setPage((prevPage) => Math.max(prevPage - 1, 1));
   }, []);
 
   const toogleWatchlist = useCallback(
     (movie) => {
-      if (watchList?.includes(movie)) {
+      const isMovieInWatchlist = watchList.some((item) => item.id === movie.id);
+      if (isMovieInWatchlist) {
         setWatchList((prevMoviesList) => {
           const filteredMovies =
             prevMoviesList?.length > 0 &&
@@ -82,6 +81,9 @@ const Movies = () => {
           <div className="flex flex-wrap">
             {movies &&
               movies?.map((movie) => {
+                const isInWatchlist = watchList.some(
+                  (item) => item.id === movie.id
+                );
                 return (
                   <div
                     key={movie?.id}
@@ -91,7 +93,7 @@ const Movies = () => {
                     }}
                   >
                     <div className="absolute top-2 right-2 bg-gray-900 p-2 text-xl rounded-xl">
-                      {!watchList?.includes(movie) ? (
+                      {!isInWatchlist ? (
                         <button
                           onClick={() => {
                             toogleWatchlist(movie);
