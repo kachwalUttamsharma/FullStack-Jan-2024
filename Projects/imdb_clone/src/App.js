@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
-import Movies from "./Components/Movies";
+import Movies from "./Components/Movies/Movies";
 import WatchList from "./Components/WatchList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Fragment } from "react";
@@ -15,7 +15,7 @@ function App() {
           path="/"
           element={
             <Fragment>
-              <Banner />
+              {/* <Banner /> */}
               <Movies />
             </Fragment>
           }

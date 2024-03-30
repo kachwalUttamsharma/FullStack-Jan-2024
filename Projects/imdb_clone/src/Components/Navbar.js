@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="flex space-x-8 items-center pl-3 py-4 border">
-      <img src={Logo} className="w-[60px]" />
+      <Link to="/">
+        <img src={Logo} className="w-[60px]" />
+      </Link>
       {/* <a href="/">
         <h3 className="text-blue-400">Movies</h3>
       </a>

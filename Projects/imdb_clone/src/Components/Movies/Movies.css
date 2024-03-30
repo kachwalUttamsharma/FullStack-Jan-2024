@@ -1,0 +1,23 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill {
+  100% {
+    border-color: #4299e1; /* Change this to your desired color */
+  }
+}
+
+.loader {
+  border: 8px solid transparent;
+  border-radius: 50%;
+  border-top: 8px solid #4299e1; /* Change this to your desired color */
+  width: 64px;
+  height: 64px;
+  animation: spin 1s linear infinite, fill 2s ease-in-out infinite;
+}
