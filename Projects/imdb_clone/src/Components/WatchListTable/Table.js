@@ -66,19 +66,22 @@ const Table = () => {
     [filteredMovies, currGenre, currGenreHandler]
   );
 
-  const sortHandler = (order) => {
-    let sortedData = [];
-    if (order === "ascending") {
-      sortedData = filteredMovies.sort((m1, m2) => {
-        return m1?.vote_average - m2.vote_average;
-      });
-    } else {
-      sortedData = filteredMovies.sort((m1, m2) => {
-        return m2?.vote_average - m1.vote_average;
-      });
-    }
-    setFilteredMovies(sortedData);
-  };
+  const sortHandler = useCallback(
+    (order) => {
+      let sortedData = [];
+      if (order === "ascending") {
+        sortedData = filteredMovies.sort((m1, m2) => {
+          return m1?.vote_average - m2.vote_average;
+        });
+      } else {
+        sortedData = filteredMovies.sort((m1, m2) => {
+          return m2?.vote_average - m1.vote_average;
+        });
+      }
+      setFilteredMovies([...sortedData]);
+    },
+    [filteredMovies]
+  );
 
   return (
     <>
