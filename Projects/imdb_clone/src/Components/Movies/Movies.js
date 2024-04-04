@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { GetTrendingMovies } from "../../Service/GetTrendingMovies";
 import Pagination from "../Pagination";
 import "./Movies.css";
+import MovieInfo from "./MovieInfo";
 
 /**
  *
@@ -14,6 +15,8 @@ const Movies = () => {
   const [page, setPage] = useState(1);
   const [loader, setLoader] = useState(true);
   const [watchList, setWatchList] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     const watchListFromLocalStorage = localStorage?.getItem("movieWatchList");
@@ -32,6 +35,16 @@ const Movies = () => {
         setLoader(false);
       });
   }, [page]);
+
+  const handleOpenModal = useCallback((movie) => {
+    setSelectedMovie(movie);
+    setOpenModal(true);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedMovie(null);
+    setOpenModal(false);
+  }, []);
 
   const loadNextPageMovies = useCallback(() => {
     setPage((prevPage) => prevPage + 1);
@@ -91,6 +104,7 @@ const Movies = () => {
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/original/t/p/w500/${movie?.poster_path})`,
                     }}
+                    onClick={() => handleOpenModal(movie)}
                   >
                     <div className="absolute top-2 right-2 bg-gray-900 p-2 text-xl rounded-xl">
                       {!isInWatchlist ? (
@@ -123,6 +137,19 @@ const Movies = () => {
             onPrev={loadPreviousPageMovies}
             currPage={page}
           />
+          {openModal && selectedMovie && (
+            <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-75 flex justify-center items-center h-screen">
+              <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-[30vw]">
+                <MovieInfo movie={selectedMovie} />
+                <button
+                  onClick={handleCloseModal}
+                  className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>
