@@ -56,7 +56,9 @@ const Movies = () => {
 
   const toogleWatchlist = useCallback(
     (movie) => {
-      const isMovieInWatchlist = watchList.some((item) => item.id === movie.id);
+      const isMovieInWatchlist = watchList?.some(
+        (item) => item.id === movie.id
+      );
       if (isMovieInWatchlist) {
         setWatchList((prevMoviesList) => {
           const filteredMovies =
@@ -94,7 +96,7 @@ const Movies = () => {
           <div className="flex flex-wrap">
             {movies &&
               movies?.map((movie) => {
-                const isInWatchlist = watchList.some(
+                const isInWatchlist = watchList?.some(
                   (item) => item.id === movie.id
                 );
                 return (
