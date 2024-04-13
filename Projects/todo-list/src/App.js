@@ -1,11 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
-import ToDoLists from "./Components/ToDoLists";
+import List from "./Components/List";
+// import ToDoLists from "./Components/ToDoLists";
+import ToDoListsReducer from "./Components/ToDoListsReducer";
 
 function App() {
   return (
     <div className="App">
-      <ToDoLists />
+      {/* <ToDoLists /> */}
+      <ToDoListsReducer />
+      <List />
     </div>
   );
 }
