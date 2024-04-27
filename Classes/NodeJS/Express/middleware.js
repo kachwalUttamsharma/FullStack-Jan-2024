@@ -1,5 +1,6 @@
 const express = require("express");
 const errorHandler = require("./ErrorHandling");
+const bookRouter = require("./booksRouter");
 const app = express();
 const port = 3001;
 
@@ -24,6 +25,8 @@ app.use(auth);
 app.use(errorHandler);
 // built-in middleware
 app.use(express.static("public"));
+// router middleware
+app.use("/books", bookRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
