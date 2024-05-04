@@ -30,6 +30,41 @@ const registerUser = async (req, res) => {
   }
 };
 
+const loginUser = async (req, res) => {
+  try {
+    // 1 check if users email is present in db
+    const userExist = await userModel.findOne({ email: req.body?.email });
+    if (!userExist) {
+      return res.status(200).send({
+        success: false,
+        message: "User Email doesnt exist",
+      });
+    }
+    // if email is present use password stored in db and required from client
+    // then compare it
+    const validatePassword = await bcrypt.compare(
+      req.body?.password,
+      userExist.password
+    );
+    if (!validatePassword) {
+      return res.status(400).send({
+        success: false,
+        message: "Incorrect Password",
+      });
+    }
+    return res.status(200).send({
+      success: true,
+      message: "User Logged In",
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error || "user has entered invalid information",
+    });
+  }
+};
+
 module.exports = {
   registerUser,
+  loginUser,
 };
