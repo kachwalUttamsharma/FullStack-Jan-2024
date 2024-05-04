@@ -12,6 +12,7 @@ const Login = () => {
       if (response.success) {
         message.success(response.message);
         // window.location.href = "/";
+        localStorage.setItem("tokenForBookMyShow", response.data);
         navigate("/");
       } else {
         message.error(response.message);
