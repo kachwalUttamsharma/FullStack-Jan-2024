@@ -49,11 +49,26 @@ const deleteMovies = async (req, res) => {
 
 const updateMovies = async (req, res) => {
   try {
-    await movieModel.findByIdAndUpdate(req.body._id, req.body);
-    res.send({
-      success: true,
-      message: "Movie Updated SuccessFully",
-    });
+    const response = await movieModel.findByIdAndUpdate(
+      req.body._id,
+      req.body,
+      {
+        upsert: true,
+        new: true,
+      }
+    );
+    if (response) {
+      res.send({
+        success: true,
+        message: "Movie Updated SuccessFully",
+        data: response,
+      });
+    } else {
+      res.send({
+        success: true,
+        message: "Movie Not Found",
+      });
+    }
   } catch (err) {
     res.send({
       success: false,

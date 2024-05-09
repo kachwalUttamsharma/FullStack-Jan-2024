@@ -8,7 +8,7 @@ const movieRouter = require("express").Router();
 
 movieRouter.get("/getAllMovies", getAllMovies);
 movieRouter.post("/addMovie", AddMovie);
-movieRouter.patch("/updateMovie", updateMovies);
-movieRouter.delete("/deleteMovie", deleteMovies);
+movieRouter.post("/updateMovie", updateMovies);
+movieRouter.post("/deleteMovie", deleteMovies);
 
 module.exports = movieRouter;
