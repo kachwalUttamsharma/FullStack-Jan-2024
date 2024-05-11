@@ -60,3 +60,39 @@ export const GetAllTheatres = async () => {
     return error.response;
   }
 };
+
+export const AddShow = async (payload) => {
+  try {
+    const response = await axiosInstance.post(
+      "/app/v1/users/theatres/add-shows",
+      payload
+    );
+    return response.data;
+  } catch (error) {
+    return error.response;
+  }
+};
+
+export const GetAllShowsByTheatre = async (payload) => {
+  try {
+    const response = await axiosInstance.post(
+      "/app/v1/users/theatres/get-all-shows-by-theatre",
+      payload
+    );
+    return response.data;
+  } catch (error) {
+    return error.response;
+  }
+};
+
+export const DeleteShow = async (payload) => {
+  try {
+    const response = await axiosInstance.post(
+      "/app/v1/users/theatres/delete-show",
+      payload
+    );
+    return response.data;
+  } catch (error) {
+    return error.response;
+  }
+};

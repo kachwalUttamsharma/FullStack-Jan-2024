@@ -23,7 +23,7 @@ theatreRouter.post("/delete-Theatre", validateJWTToken, deleteTheatre);
 theatreRouter.get("/get-all-theatres", validateJWTToken, getAllTheatres);
 theatreRouter.post("/add-shows", validateJWTToken, addShowToTheatre);
 theatreRouter.post("/delete-show", validateJWTToken, deleteShow);
-theatreRouter.get(
+theatreRouter.post(
   "/get-all-shows-by-theatre",
   validateJWTToken,
   getAllShowsByTheatre

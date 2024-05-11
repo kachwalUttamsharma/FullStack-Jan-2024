@@ -1,4 +1,5 @@
 const Theatre = require("../model/theatreModel");
+const show = require("../model/showModel");
 
 const addTheatre = async (req, res) => {
   try {
