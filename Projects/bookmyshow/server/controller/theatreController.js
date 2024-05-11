@@ -78,10 +78,65 @@ const getAllTheatresByOwnerId = async (req, res) => {
   }
 };
 
+const addShowToTheatre = async (req, res) => {
+  try {
+    const newShow = new show(req.body);
+    await newShow.save();
+    res.send({
+      success: true,
+      message: "Show added successfully",
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+const getAllShowsByTheatre = async (req, res) => {
+  try {
+    const shows = await show
+      .find({ theatre: req.body.theatreId })
+      .populate("movie")
+      .sort({
+        createdAt: -1,
+      });
+    res.send({
+      success: true,
+      message: "Shows fetched successfully",
+      data: shows,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+const deleteShow = async (req, res) => {
+  try {
+    await show.findByIdAndDelete(req.body.showId);
+    res.send({
+      success: true,
+      message: "Show deleted successfully",
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   addTheatre,
   updateTheatre,
   deleteTheatre,
   getAllTheatres,
   getAllTheatresByOwnerId,
+  addShowToTheatre,
+  getAllShowsByTheatre,
+  deleteShow,
 };
