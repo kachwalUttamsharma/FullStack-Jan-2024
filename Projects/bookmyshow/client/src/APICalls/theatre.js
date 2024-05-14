@@ -96,3 +96,15 @@ export const DeleteShow = async (payload) => {
     return error.response;
   }
 };
+
+export const GetAllTheatresByMovie = async (payload) => {
+  try {
+    const response = await axiosInstance.post(
+      "/app/v1/users/theatres/getAllTheatresByMovie",
+      payload
+    );
+    return response.data;
+  } catch (error) {
+    return error.response;
+  }
+};

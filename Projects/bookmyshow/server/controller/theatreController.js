@@ -1,5 +1,6 @@
 const Theatre = require("../model/theatreModel");
 const show = require("../model/showModel");
+const showModel = require("../model/showModel");
 
 const addTheatre = async (req, res) => {
   try {
@@ -131,6 +132,45 @@ const deleteShow = async (req, res) => {
   }
 };
 
+const getAllTheatresByMovie = async (req, res) => {
+  try {
+    const { movie, date } = req.body;
+    const shows = await showModel
+      .find({ movie, date })
+      .populate("theatre")
+      .sort({ createdAt: -1 });
+    const uniqueTheatres = [];
+    // {TheatreInformation, showinformation}
+    shows.forEach((show) => {
+      // check if given theatre is already present in uniquetheatre
+      const theatre = uniqueTheatres.find(
+        (theatre) => theatre._id == show.theatre._id
+      );
+      if (!theatre) {
+        // filter and get all shows for given theatre
+        const showsForThisTheatre = shows.filter(
+          (showObj) => showObj.theatre._id == show.theatre._id
+        );
+        // map theatre and shows and push into unique theatre
+        uniqueTheatres.push({
+          ...show.theatre._doc,
+          shows: showsForThisTheatre,
+        });
+      }
+    });
+    res.send({
+      success: true,
+      message: "Theatres fetched successfully",
+      data: uniqueTheatres,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   addTheatre,
   updateTheatre,
@@ -140,4 +180,5 @@ module.exports = {
   addShowToTheatre,
   getAllShowsByTheatre,
   deleteShow,
+  getAllTheatresByMovie,
 };

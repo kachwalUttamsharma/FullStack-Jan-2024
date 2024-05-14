@@ -13,6 +13,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import { useSelector } from "react-redux";
 import Admin from "./Pages/Admin/Admin";
 import Profile from "./Pages/Profile/Profile";
+import TheatreForMovie from "./Pages/TheatreForMovie/TheatreForMovie";
 
 function App() {
   const { loading } = useSelector((state) => state.loaders);
@@ -48,6 +49,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/movie/:id"
+            element={
+              <ProtectedRoute>
+                <TheatreForMovie />
               </ProtectedRoute>
             }
           />

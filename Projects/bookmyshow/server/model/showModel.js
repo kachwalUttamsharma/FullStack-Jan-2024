@@ -33,7 +33,7 @@ const showSchema = new mongoose.Schema(
     },
     theatre: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "theatres",
+      ref: "theatre",
       required: true,
     },
   },

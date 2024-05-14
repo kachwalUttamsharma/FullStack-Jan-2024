@@ -47,13 +47,13 @@ export const UpdateMovie = async (payload) => {
   }
 };
 
-// export const GetMovieById = async (id) => {
-//   try {
-//     const response = await axiosInstance.get(
-//       `/api/movies/get-movie-by-id/${id}`
-//     );
-//     return response.data;
-//   } catch (err) {
-//     return err.message;
-//   }
-// };
+export const GetMovieById = async (id) => {
+  try {
+    const response = await axiosInstance.get(
+      `/app/v1/users/admin/getMovieById/${id}`
+    );
+    return response.data;
+  } catch (err) {
+    return err.message;
+  }
+};
