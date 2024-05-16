@@ -8,6 +8,7 @@ const {
   deleteShow,
   getAllShowsByTheatre,
   getAllTheatresByMovie,
+  getShowById,
 } = require("../controller/theatreController");
 const { validateJWTToken } = require("../middleware/authMiddleware");
 
@@ -34,6 +35,7 @@ theatreRouter.post(
   validateJWTToken,
   getAllTheatresByMovie
 );
+theatreRouter.post("/getShowById", validateJWTToken, getShowById);
 
-///app/v1/users/theatres/getAllTheatresByMovie
+///app/v1/users/theatres/getShowById
 module.exports = theatreRouter;

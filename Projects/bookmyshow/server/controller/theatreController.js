@@ -171,6 +171,25 @@ const getAllTheatresByMovie = async (req, res) => {
   }
 };
 
+const getShowById = async (req, res) => {
+  try {
+    const showData = await showModel
+      .findById(req.body.showId)
+      .populate("movie")
+      .populate("theatre");
+    res.send({
+      success: true,
+      message: "Show fetched Successfully",
+      data: showData,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   addTheatre,
   updateTheatre,
@@ -181,4 +200,5 @@ module.exports = {
   getAllShowsByTheatre,
   deleteShow,
   getAllTheatresByMovie,
+  getShowById,
 };

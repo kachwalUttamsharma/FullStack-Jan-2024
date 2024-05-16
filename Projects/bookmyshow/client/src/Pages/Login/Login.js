@@ -11,9 +11,8 @@ const Login = () => {
       const response = await LoginUser(values);
       if (response.success) {
         message.success(response.message);
-        // window.location.href = "/";
         localStorage.setItem("tokenForBookMyShow", response.data);
-        navigate("/");
+        window.location.href = "/";
       } else {
         message.error(response.message);
       }
